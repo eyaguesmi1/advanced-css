@@ -1,0 +1,271 @@
+/* General Page Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: white;
+
+}
+
+.logo img {
+    height: 40px; /* Adjust logo size */
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: rgb(146, 144, 144);
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+
+nav ul li a:hover {
+    color: #00CCB1; /* Changes color on hover */
+}
+
+/* Main Section */
+main {
+    text-align: center;
+    margin: 40px auto;/*pour quelle soit centrer*/
+    width: 80%;
+    max-width: 900px;/*pour definir le width maximale*/
+}
+
+.intro {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: column;
+}
+.intro img{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-self: center;
+
+}
+h2{
+    color: #00CCB1;
+    font-weight: lighter;
+}
+
+.intro .textContent{
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: row;
+    text-align: left;
+    color: #2d3436;
+    
+
+}
+
+/* Services Section */
+.services {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Service Box Styling */
+.service-box {
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    color: white;
+    text-align: left;
+    
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.patient {
+    background-color: #19D1B9;
+}
+
+.doctor {
+    background-color: #508FE2;
+}
+.clinics{
+    background-color: #313C48;
+
+}
+
+/* societies styling */
+.societies{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 50px;
+    margin: 40px 0px;
+
+
+}
+
+/* a-propos styling */
+.a-propos{
+    display: flex;
+    background-color: #DEF8F6;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px 0px;
+
+}
+
+.Content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    
+}
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 50%;
+
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width:95% ;
+    margin: 10px;
+    padding: 10px;
+    background-color: white;
+    
+}
+.a-propos h3{
+    color: #00CCB1;
+    font-weight: lighter;
+}
+.Content img{
+    height: 150px;
+    width: 150px;
+}
+
+/* Departments section */
+
+.Departments{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px 0px;
+    text-align: center;
+
+    
+}
+.places{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 50%;
+    gap: 20px;
+    justify-content: center;
+    background-color: white;
+    
+
+}
+.places h2{
+    color: #2d3436;
+}
+.places :hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+.places img{
+    width: 280px;
+    height: 240px;
+    border-radius: 10px;
+}
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background: #0056b3;
+}
+
+/* Footer */
+footer {
+    margin: 40px 0px;
+    color:#2d3436;
+    text-align: center;
+    padding: 10px;
+    
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+/* Fade-in Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-box {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    footer {
+        position: relative; /* Remove fixed positioning */
+    }
+}
